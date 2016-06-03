@@ -1,0 +1,20 @@
+<h3>Edit League</h3>
+<div class="signup">
+
+<%= form_for @league do |f| %>
+
+
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+    <%= f.text_field :image, :required => true %>
+</p>
+
+<%= f.submit "Update" %>
+<% end %>
+</div>

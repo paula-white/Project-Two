@@ -1,0 +1,21 @@
+
+
+
+<div class="sport">
+
+<h4>Select a <br>sport.</h4>
+
+<ul>
+  <% @sports.each do |sport| %>
+    <li>
+      <a href="/leagues/new/<%= sport.id%>">
+        <%= sport.name %>
+      </a>
+
+
+    </li>
+  <% end  %>
+</ul>
+
+
+</div>

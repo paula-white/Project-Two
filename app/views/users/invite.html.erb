@@ -1,0 +1,12 @@
+<div class="signup">
+
+<h3>Invite a user for <%= @sport.name%></h3>
+<!-- <%#= form_tag  %> -->
+
+<%= form_tag(method: "POST") do %>
+  <%#= label_tag(:q, "Search for:") %>
+  <%= select_tag "users", options_from_collection_for_select(@users, "id", "email"), :multiple => true%>
+  <!-- <%#= text_field_tag(:user_id) %> -->
+  <%= submit_tag("Invite Friend") %>
+<% end %></div>
+<%#= @users %>

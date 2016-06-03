@@ -1,0 +1,18 @@
+
+
+
+
+
+<h4>This should show all of the sports</h4>
+
+<ul>
+  <% @sports.each do |sport| %>
+    <li>
+      <a href="/sports/<%= sport.name %>">
+        <%= sport.name %>
+      </a>
+
+
+    </li>
+  <% end  %>
+</ul>

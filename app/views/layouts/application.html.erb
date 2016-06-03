@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Hind:400,600|Asap|Cantarell|Droid+Sans+Mono|Sintony:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,100|Poppins:400,600|Varela' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Varela' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!--"Show all users"  (/users) ALL THE TIME
+" View a profile"  (/users/12) IF I AM LOGGED IN
+" Edit a user" (/users/12/edit) IF I AM LOGGED IN
+" Delete an Account" (/users/12/delete) _ IF I AM LOGGED IN
+" Logout" (/user/logout) - IF I AM LOGGED IN
+" Create an account" (/users/new )- IF I AM NOT LOGGED IN
+-->
+<header>
+
+  <div class="box hidden">
+    <img src="/assets/logo2.png" alt="logotwo">
+    <br>
+    <% if @current_user %>
+      <p><%= link_to "Create new league", sports_path %></p>
+      <p><%= link_to  "Existing leagues", leagues_path %></p>
+      <p><%= link_to "All users", users_path %></p>
+      <p><%= link_to "View Profile", @current_user %></p>
+      <p><%= link_to "Edit profile", edit_user_path(@current_user) %></p>
+  <% end %>
+  </div>
+
+
+<nav>
+<% if @current_user %>
+  <%= link_to "Logout", logout_path, :method => :delete%>
+  <%#= link_to "Create new league", sports_path %>
+    <%#= link_to  "Existing leagues", leagues_path %>
+     <!-- location -->
+    <%#= link_to "All users", users_path %>
+    <%#= link_to "View Profile", @current_user %>
+    <%#= link_to "Edit profile", edit_user_path(@current_user) %>
+    <!-- <%= link_to "Delete Account", user_path(@current_user), :method => :delete %> -->
+
+    <img src="/assets/logo.png" alt="logo">
+  <%#= link_to "Premiere", home_path %>
+<% else %>
+    <%= link_to "Sign Up", new_user_path %>
+    <%= link_to "Log in", login_path	 %>
+    <!-- <%= link_to "Login", login_path %> -->
+  <% end %>
+</nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <% if @current_user %>
+  <p>Your email is <%#= @current_user.email %></p>
+  <% end %> -->
+
+
+  <% if flash[:error] %>
+  <p><%=flash[:error] %></p>
+  <% end %>
+
+<div class="container">
+<%= yield %></div>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

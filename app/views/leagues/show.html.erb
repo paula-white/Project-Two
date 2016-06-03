@@ -1,0 +1,15 @@
+<h2>This should show the league that was just created</h2>
+<div class="signup"></div>
+<%= @league.name %>
+
+<%= @sport.name %>
+
+<%= image_tag @league.image, :class => 'feature' %>
+
+  <!-- <p><img src=<%#= @league.image  %> :class => 'feature'></p> -->
+  <%= link_to "Events", league_messages_path(@league.id) %>
+    <%= link_to "Scoreboard", league_scoreboard_path(@league.id)		 %>
+
+    <p><%= link_to "Delete league", league_path(@league.id), :method => :delete  %>
+
+      <%= link_to "Edit league", edit_league_path(@league.id) %><div>

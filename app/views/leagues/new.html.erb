@@ -1,0 +1,19 @@
+<div class="signup">
+  <h3>League name form</h3>
+
+<%= form_for @league do | f | %>
+<p>
+  <%= f.hidden_field "sport_id", value: @sport.id%>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :image %>
+    <%= f.text_field :image, :required => true %>
+</p>
+
+
+<%= f.submit %>
+<% end %>
+</div>

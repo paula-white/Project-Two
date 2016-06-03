@@ -1,0 +1,18 @@
+<h9>This should show all of the users leagues</h9>
+
+
+
+
+<ul>
+  <% @leagues.each do |league| %>
+    <li>
+      <a href="/leagues/<%= league.id %>">
+        <%= league.name %>
+        <%= image_tag league.image, :class => 'feature' %>
+      
+      </a>
+
+
+    </li>
+  <% end  %>
+</ul>
