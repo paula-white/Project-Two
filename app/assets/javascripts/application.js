@@ -17,7 +17,11 @@
 //= require_tree .
 
 // uber nav bar
-    $(".box").click(function(){
-        $(this).toggleClass("hidden");
+    $(".logo").click(function(){
+        $(".box").toggleClass("hidden");
         // console.log("No you didn't")
       });
+      $(".logo2").click(function(){
+          $(".box").toggleClass("hidden");
+          // console.log("No you didn't")
+        });

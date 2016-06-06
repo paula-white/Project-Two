@@ -1,10 +1,13 @@
+<h2><%= link_to @league.name, league_path(@league.id)%></h2><br>
+
+
 <% @messages.each do  |m|%>
   <%= m.message %>
 <% end %>
 
 <%= form_for @message, :url => {:action => :create} do |m| %>
 <%= m.hidden_field :league_id, :value => @league.id %>
-<%= m.label :message %> <br />
-<%= m.text_area :message, :size => "44x6" %><br />
-<%= submit_tag("Post") %>
+<h5><%= m.label :events %> </h5><br/>
+<%= m.text_area :message, :size => "40x3", :class => "events" %>
+<%= submit_tag "Post", :class => "updateButton" %>
 <% end %>

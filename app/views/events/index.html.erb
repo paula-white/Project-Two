@@ -5,6 +5,6 @@
 <%= form_for @event do |e| %>
 <%= e.hidden_field :league_id, :value => @league.id%>
 <%= e.label :message %> <br />
-<%= e.text_area :message, :size => "44x6" %><br />
+<%= e.text_area :message, :size => "40x3" %>
 <%= submit_tag("Post") %>
 <% end %>

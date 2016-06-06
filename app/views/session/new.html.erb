@@ -1,3 +1,9 @@
+
+<div class="row">
+  <div class="col-md-4">
+      </div>
+    <div class="col-md-4">
+
 <div class="signup">
 
   <h3>Login</h3>
@@ -14,15 +20,25 @@
 
 
 <p>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %>
+  <%#= label_tag :email %>
+  <%= email_field_tag :email, type="email", :class => "color" %>
 </p>
 
 <p>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%#= label_tag :password %>
+  <%= password_field_tag :password, type="password", :class => "color" %>
 </p>
 
-<%= submit_tag "Login" %>
 
-<% end %></div>
+
+<%= submit_tag "Login", :class => "updateButton" %>
+
+<% end %>
+</div>
+</div>
+
+  <!-- <div class="col-md-3">
+  </div>
+
+</div>
+</div> -->

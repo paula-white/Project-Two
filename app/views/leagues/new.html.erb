@@ -1,19 +1,29 @@
+<div class="row">
+  <div class="col-md-4">
+      </div>
+    <div class="col-md-4">
+
+
+
+
 <div class="signup">
-  <h3>League name form</h3>
+  <h5> New League</h5>
 
 <%= form_for @league do | f | %>
 <p>
   <%= f.hidden_field "sport_id", value: @sport.id%>
-  <%= f.label :name %>
-  <%= f.text_field :name, :required => true %>
+  <%#= f.label :name %>
+  <%= f.text_field :name, class: "color2", value: "name", :required => true %>
 </p>
 
 <p>
-  <%= f.label :image %>
-    <%= f.text_field :image, :required => true %>
+  <%#= f.label :image %>
+    <%= f.text_field :image, class: "color2", value: "image", :required => true %>
 </p>
 
 
-<%= f.submit %>
+<%= f.submit class: "updateButton" %>
 <% end %>
+</div>
+</div>
 </div>

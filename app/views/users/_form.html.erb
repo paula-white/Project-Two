@@ -13,29 +13,29 @@
 
 
 <p>
-  <%= f.label :name %>
-  <%= f.text_field :name, :required => true %>
+  <%= f.label :name, class: "font" %>
+  <%= f.text_field :name, class: "color2", :required => true %>
 </p>
 
 <p>
-  <%= f.label :image %>
-    <%= f.text_field :image, :required => true %>
+  <%= f.label :image, class: "font" %>
+    <%= f.text_field :image, class: "color2", :required => true %>
 </p>
 
 <p>
-  <%= f.label :email %>
-  <%= f.email_field :email, :required => true %>
+  <%= f.label :email, class: "font" %>
+  <%= f.email_field :email, class: "color2", :required => true %>
 </p>
 
 <p>
-  <%= f.label :password %>
-  <%= f.password_field :password, :required => true %>
+  <%= f.label :password, class: "font" %>
+  <%= f.password_field :password, class: "color2", :required => true %>
 </p>
 
 <p>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, :required => true %>
+  <%= f.label :password_confirmation, class: "font" %>
+  <%= f.password_field :password_confirmation, class: "color2", :required => true %>
 </p>
 
-<%= f.submit "Update" %>
+<%= f.submit "Update", :class => "updateButton" %>
 <% end %>

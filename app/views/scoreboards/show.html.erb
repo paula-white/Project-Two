@@ -1,4 +1,6 @@
-<h7><%= @league.name %></h7>
+
+
+<h2><%= link_to @league.name, league_path(@league.id)%></h2>
 <ul>
   <!-- <li><%#= @creator.name %></li> -->
   <% @user_scores.each do |user_score| %>
@@ -8,8 +10,8 @@
 
 <%= form_tag do %>
   <p>
-    <%= label_tag "Your wins" %>
-    <%= number_field_tag :wins %>
-    <%= submit_tag %>
+    <%#= label_tag "Your wins", :class => "font" %>
+    <%= number_field_tag :wins, type="Your wins", :class => "color"  %>
+    <%= submit_tag "Update", :class => "updateButton" %>
   </p>
 <% end %>

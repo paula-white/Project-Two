@@ -2,11 +2,18 @@
 <html>
 <head>
   <title>Login</title>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Hind:400,600|Asap|Cantarell|Droid+Sans+Mono|Sintony:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,100|Poppins:400,600|Varela' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Varela' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900,900italic,100|Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -20,15 +27,15 @@
 <header>
 
   <div class="box hidden">
-    <img src="/assets/logo2.png" alt="logotwo">
-    <br>
+    <img src="/assets/logo2.png" alt="logotwo" class="logo2">
+    <br><ul>
     <% if @current_user %>
-      <p><%= link_to "Create new league", sports_path %></p>
-      <p><%= link_to  "Existing leagues", leagues_path %></p>
-      <p><%= link_to "All users", users_path %></p>
-      <p><%= link_to "View Profile", @current_user %></p>
-      <p><%= link_to "Edit profile", edit_user_path(@current_user) %></p>
-  <% end %>
+    <li>  <%= link_to "Create new league", sports_path %></li>
+      <li>   <%= link_to  "Existing leagues", leagues_path %></li>
+      <li>   <%= link_to "All users", users_path %></li>
+      <li>   <%= link_to "View Profile", @current_user %></li>
+      <li>   <%= link_to "Edit profile", edit_user_path(@current_user) %></li>
+  <% end %></ul>
   </div>
 
 
@@ -43,7 +50,7 @@
     <%#= link_to "Edit profile", edit_user_path(@current_user) %>
     <!-- <%= link_to "Delete Account", user_path(@current_user), :method => :delete %> -->
 
-    <img src="/assets/logo.png" alt="logo">
+    <img src="/assets/logo.png" alt="logo" class="logo">
   <%#= link_to "Premiere", home_path %>
 <% else %>
     <%= link_to "Sign Up", new_user_path %>

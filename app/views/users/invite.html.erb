@@ -1,6 +1,11 @@
-<div class="signup">
+<div class="row">
+  <div class="col-md-4">
+      </div>
+    <div class="col-md-4">
 
-<h3>Invite a user for <%= @sport.name%></h3>
+
+
+<h5>Invite a user for <%= @sport.name%></h5>
 <!-- <%#= form_tag  %> -->
 
 <%= form_tag(method: "POST") do %>
@@ -8,5 +13,8 @@
   <%= select_tag "users", options_from_collection_for_select(@users, "id", "email"), :multiple => true%>
   <!-- <%#= text_field_tag(:user_id) %> -->
   <%= submit_tag("Invite Friend") %>
-<% end %></div>
+<% end %>
 <%#= @users %>
+
+</div>
+</div>

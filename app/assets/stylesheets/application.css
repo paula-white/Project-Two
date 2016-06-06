@@ -1,6 +1,7 @@
  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Varela);
  @import url(https://fonts.googleapis.com/css?family=Raleway:400,100|Poppins:400,600|Varela);
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Hind:400,600|Asap|Cantarell|Droid+Sans+Mono|Sintony:400,700);
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,900,900italic,100|Montserrat:400,700);
  /*// font-family: 'Varela', sans-serif;
  // font-family: 'Poppins', sans-serif;
  // font-family: 'Raleway', sans-serif;
@@ -12,94 +13,173 @@
  // font-family: 'Open Sans', sans-serif;
  font-family: 'Varela', sans-serif;
  font-family: 'Montserrat', sans-serif;
+ font-family: 'Montserrat', sans-serif;
+ font-family: 'Lato', sans-serif;
  */
 
   /*#a3c2c2*/
+
+/*NAV BAR ''''''''''''''''''''''''''''''''''''''''''*/
+
+
+    /*Font inside the nav bar*/
+    nav a {
+    font-family: 'Cantarell', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    float:right;
+    margin-right: 30px;
+    display: block;
+    opacity: 1;
+    line-height: 80px;
+    }
+
+    nav a:hover {
+    color: white;
+    text-decoration: none;
+    }
+
+
+    /*Nav bar*/
+    header{
+    position: fixed;
+    background-color: #49494f;
+    opacity: .9;
+    width:100vw;
+    height: 80px;
+    top: 0px;
+    left: 0px;
+    line-height: 50px;
+    z-index: 1000;
+    }
+
+  /*Hamburger logo*/
   .logo{
-  left: 0px;
-  margin-right: 800px;
-  z-index: 0;
+    left: 0px;
+    margin-right: 800px;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 0;
+    line-height: 80px;
+    }
+
+  /*Cross Logo*/
+  .logo2{
+    margin-left: 20px;
+    margin-top: 20px;
+    }
 
 
-  }
+    /*Hidden nav bar that changes state on the click of the burger*/
+  .box {
+    float: left;
+    background: black;
+    height:100vh;
+    width: 35%;
+    display: inline-block;
+    }
+
+    /*Effect on the nav bar*/
+  .hidden {
+    display: none;
+    }
+
+
+    /*Links in the nav bar*/
+  .box a{
+    margin-top: 400px;
+    font-family: 'Cantarell', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    }
+
+    .box a:hover{
+    color: white;
+    }
+
+    a{
+    text-decoration: none;
+    color: #49494f;
+    }
+
+    a:hover{
+    color: #49494f;
+    text-decoration: none;
+    }
+
+    .grid a{
+    text-decoration: none;
+    color: #49494f;
+    }
+
+    ul li {
+    margin:15px;
+    }
 
 
 
   body {
-  padding: 0;
-  margin: 0;
-  }
-
-  /*Font inside the nav bar*/
-  nav a {
-  font-family: 'Cantarell', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  float:right;
-  margin-right: 30px;
-  display: block;
-  opacity: 1;
-  }
+    padding: 0;
+    margin: 0;
+    }
 
 
-  /*Nav bar*/
-  header{
-  position: fixed;
-  background-color: #49494f;
-  opacity: .9;
-  width:100vw;
-  height: 80px;
-  top: 0px;
-  left: 0px;
-  line-height: 80px;
-  }
-
+/*HEADINGS '''''''''''''''''''''''''''''''''''''*/
   /*Font on home page*/
   h1{
-  font-family: 'helvetica';
-  color: white;
-  font-size: 80px;
-  text-transform: uppercase;
-  margin-top: 300px;
-  margin-left: 750px;
-  }
+    font-family: 'helvetica';
+    color: white;
+    font-size: 80px;
+    text-transform: uppercase;
+    margin-top: 300px;
+    margin-left: 750px;
+    }
 
 
   /*Profile name font*/
   h2 {
-  margin: 0px;
-  font-family: 'Cantarell', sans-serif;
-  text-transform: uppercase;
-  color:#595959;
-  font-size: 70px;
-  }
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#595959;
+    font-size: 60px;
+    position: relative;
+    top: 40px;
+    z-index: 2;
+    }
   /*Sign up and log in*/
   h3{
-  font-family: 'Cantarell', sans-serif;
-  text-transform: uppercase;
-  color:#595959;
-  font-size: 50px;
-  }
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#595959;
+    font-size: 50px;
+    }
 
   /*Font on the create a sport page*/
   h4 {
-  font-size: 70px;
-  color: white;
-  font-weight: bold;
-  font-family: 'helvetica';
-  text-transform: uppercase;
-  margin-left: 50px;
-  margin-top: 30px;
-  color: white;
-  }
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    font-family: 'helvetica';
+    text-transform: uppercase;
+    /*margin-left: 50px;
+    margin-top: 30px;*/
+    color: white;
+    }
 
-.court {
-  position: fixed;
-  width: 100px;
-  height:100px;
-  }
+  h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#595959;
+    font-size: 30px;
+    }
 
+/* IMAGES '''''''''''''''''''''''''''''''''''''''''''''''*/
  /* Home background image*/
 .skate {
  background-image: url("/assets/skate.jpg");
@@ -110,6 +190,7 @@
  padding-top: 80px;
  }
 
+  /*Image on sports page*/
  .sport {
   background-image: url("/assets/court.jpg");
   width: 100%;
@@ -117,67 +198,165 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding-top: 80px;
+  position: absolute;
+  }
+
+  /*League Thumbnails*/
+  .feature {
+  max-width: 200px;
+  max-height: 200px;
+  }
+
+  /*League show picture*/
+  .pic{
+    max-width: 100%;
+    max-height: 425px;
+  }
+
+  /*Profile Picture*/
+  .profile{
+  max-width: 100%;
+  max-height: 500px;
+
+  /*margin-left: 80px;*/
   }
 
 .container{
   padding-top: 80px;
   }
 
-/*Hidden nav bar that changes state on the click of the burger*/
-.box {
-  float: left;
-  background: black;
-  height:100vh;
-  width: 35%;
-  display: inline-block;
-  }
 
-
-  .hidden {
-    opacity: 0;
-  }
-
-
-
-.box a{
-  margin-top: 400px;
-
-  font-family: 'Cantarell', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-}
-
-.logotwo{
-  margin-left: 25px;
-
-}
 
 ul {
-
   list-style-type: none;
+  margin-top: 30px;
+
+  }
+
+.grid {
   columns: 4;
-  max-width: 800px;
   }
 
-  .feature {
-    max-width: 400px;
-    display: block;
-    margin: 10px;
-  }
 
-  .profile{
-    max-width: 250px;
-    display: block;
-    margin-left: 150px;
 
-  }
+
 
 .user {
-  margin-left: 500px;
-  margin-bottom: 300px;
-}
+  margin-top: 103px;
+  }
 
+.user a {
+  text-decoration: none;
+  font-family: 'Cantarell', sans-serif;
+  text-transform: uppercase;
+  }
+
+/*All sport selection link on the sports page*/
+.sport a {
+  text-decoration: none;
+  font-size: 50px;
+  font-family: 'Cantarell', sans-serif;
+  text-transform: uppercase;
+  }
+
+/*FORMS ''''''''''''''''''''''''''''''''''''''''''''*/
+/*all the forms */
 .signup {
-  margin-left: 500px;
-}
+  max-width: 400px;
+  margin-left: 100px;
+  margin-top: 100px;
+  }
+
+/*Thicker bars*/
+  .color{
+    background-color: #afbccc;
+    border-style: none;
+    border-radius: 4px;
+    padding: 15px 50px;
+    color: white;
+    text-transform: uppercase;
+    }
+
+/*Thinner bars*/
+  .color2{
+    background-color: #afbccc;
+    border-style: none;
+    border-radius: 4px;
+    padding: 10px 45px;
+    color: white;
+    text-transform: uppercase;
+    }
+
+/*Message submit box*/
+  .events{
+    border-radius: 4px;
+    border: 2px solid #afbccc;
+    color: #afbccc;
+    text-transform: uppercase;
+    }
+
+  .edit{
+    margin-top: 50px;
+    max-width: 250px;
+    }
+
+  .deleteButton{
+  border: 2px solid #afbccc;
+  padding: 7px;
+  color:#afbccc;
+  position: relative;
+  top: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  }
+
+  .deleteButton a:hover{
+      color:#afbccc;
+      text-decoration: none;
+  }
+
+  .league a:hover{
+    color:white;
+    text-decoration: none;
+  }
+  .bottom a:hover{
+      color:#afbccc;
+      text-decoration: none;
+  }
+  .league{
+    padding-top: 50px;
+  }
+
+
+  .updateButton{
+    border: 2px solid #afbccc;
+    padding: 6px;
+    color:#afbccc;
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 15px;
+    float:left;
+    margin-right: 20px;
+    }
+
+.font {
+  color:#afbccc;
+  text-transform: uppercase;
+  font-family: 'Cantarell', sans-serif;
+  }
+
+/*BOOTSTRAP CODE BELOW'''''''''''''''''''''''''''''''''*/
+
+  .col-md-4{
+    z-index: 1;
+    border: 1px solid black;
+    }
+
+  .form{
+    padding-top: 240px;
+    }
+
+.col-md-3{
+    border: 1px solid black;
+    /*padding-top: 100px;*/
+    }

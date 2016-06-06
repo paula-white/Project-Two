@@ -1,15 +1,17 @@
-<h9>This should show all of the users leagues</h9>
+
+
+<h6>This should show all of the users leagues</h6>
 
 
 
 
-<ul>
+<ul class="grid">
   <% @leagues.each do |league| %>
     <li>
       <a href="/leagues/<%= league.id %>">
         <%= league.name %>
         <%= image_tag league.image, :class => 'feature' %>
-      
+
       </a>
 
 
